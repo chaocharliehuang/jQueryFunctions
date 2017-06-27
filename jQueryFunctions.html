@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>jQuery Functions</title>
+        <meta charset="UTF-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('#hide-btn').click(function() {
+                    $('.generic-p p').hide();
+                });
+                $('#show-btn').click(function() {
+                    $('.generic-p p').show();
+                });
+                $('#toggle-btn').click(function() {
+                    $('.generic-p p').toggle();
+                });
+                $('#slideDown-btn').click(function() {
+                    $('.generic-p p').slideDown('slow', function() {
+                        $('.generic-p p').css('color', 'red');
+                    });
+                });
+                $('#slideUp-btn').click(function() {
+                    $('.generic-p p').slideUp('slow', function() {
+                        $('.generic-p p').css('color', 'black');
+                    });
+                });
+                $('#slideToggle-btn').click(function() {
+                    $('.generic-p p').slideToggle('slow');
+                });
+                $('#fadeIn-btn').click(function() {
+                    $('.generic-p p').fadeIn('slow');
+                });
+                $('#fadeOut-btn').click(function() {
+                    $('.generic-p p').fadeOut('slow');
+                });
+                $('#addClass-btn').click(function() {
+                    $('.generic-p p').addClass('newClass');
+                    alert("new class added to paragraph!");
+                });
+                $('#before-btn').click(function() {
+                    $('.generic-p p').before('<p>new paragraph</p>');
+                });
+                $('#after-btn').click(function() {
+                    $('.generic-p p').after('<ul><li>1</li><li>2</li></ul>');
+                });
+                $('#append-btn').click(function() {
+                    $('.generic-p ul').append('<li>new item</li>');
+                });
+                $('#html-btn').click(function() {
+                    $('.generic-p ul').html('<li>changed item</li><li>changed item</li>');
+                });
+                $('#attr-btn').click(function() {
+                    $('.generic-p p').attr('style', 'color: blue');
+                });
+                $('#val-btn').click(function() {
+                    $('.generic-p input').val('new text');
+                });
+                $('#text-btn').click(function() {
+                    alert($('.generic-p ul').text());
+                });
+                $('#data-btn').click(function() {
+                    alert($('.generic-p input').data());
+                });
+            });
+        </script>
+        </head>
+    <body>
+        <div class="generic-p">
+            <p>Qui consequat sunt consectetur eu minim amet eiusmod laboris. Pariatur consectetur ullamco duis in. Do pariatur culpa et in duis nostrud enim veniam. Velit enim elit esse adipisicing proident amet cupidatat anim est sint ea nostrud et.</p>
+            <ul>
+                <li>old item</li>
+                <li>old item</li>
+                <li>old item</li>
+            </ul>
+            <input type="text" value="some text">
+            <hr>
+            <button type="button" id="hide-btn">Hide the paragraph</button>
+            <button type="button" id="show-btn">Show the paragraph</button>
+            <button type="button" id="toggle-btn">Toggle the paragraph on/off</button>
+            <hr>
+            <button type="button" id="slideDown-btn">Slide paragraph down</button>
+            <button type="button" id="slideUp-btn">Slide paragraph up</button>
+            <button type="button" id="slideToggle-btn">Toggle slide paragraph up/down</button>
+            <hr>
+            <button type="button" id="fadeIn-btn">Fade paragraph in</button>
+            <button type="button" id="fadeOut-btn">Fade paragraph out</button>
+            <button type="button" id="addClass-btn">Add class to paragraph</button>
+            <hr>
+            <button type="button" id="before-btn">Add new paragraph before paragraph</button>
+            <button type="button" id="after-btn">Add new ul after paragraph</button>
+            <button type="button" id="append-btn">Append new li to ul</button>
+            <hr>
+            <button type="button" id="html-btn">Change HTML of ul to be a new list</button>
+            <button type="button" id="attr-btn">Change style attribute of paragraph</button>
+            <button type="button" id="val-btn">Change value of text input field</button>
+            <hr>
+            <button type="button" id="text-btn">Get text of ul, without HTML tags</button>
+            <button type="button" id="data-btn">Display what text field is</button>
+        </div>
+    </body>
+</html>
